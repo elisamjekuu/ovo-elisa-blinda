@@ -13,7 +13,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./assets/ovo.jpeg"
     />
     <link rel="stylesheet" href="style.css" />
     <title>October's Very Own</title>
@@ -60,8 +60,7 @@
                 id="username"
                 name="username"
                 placeholder="Username"
-                required
-              />
+                />
               <img
                 src="./assets/images/icon-invalid.svg"
                 alt=""
@@ -77,7 +76,6 @@
                 id="email"
                 name="email"
                 placeholder="Email"
-                required
               />
               <img
                 src="./assets/images/icon-invalid.svg"
@@ -94,7 +92,6 @@
                   id="password"
                   name="password"
                   placeholder="Password"
-                  required
                 />
                 <img
                   src="./assets/images/icon-invalid.svg"
@@ -107,11 +104,10 @@
               <div class="contact__control">
                 <label for="confirmPassword" class="visually-hidden">Confirm Password</label>
                 <input
-                  type="confirmPassword"
+                  type="password"
                   id="confirmPassword"
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  required
                 />
                 <img
                   src="./assets/images/icon-invalid.svg"
@@ -122,7 +118,7 @@
                 />
               </div>
             <div class="contact__control align-right">
-              <button type="submit">Sign up</button>
+              <button id="signup" type="submit">Sign up</button>
             </div>
           </form>
         </div>
@@ -197,4 +193,5 @@
       </div>
     </footer>
   </body>
+  <script src="./signup.js"></script>
 </html>
