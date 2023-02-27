@@ -1,2 +1,4 @@
-# projekti web dhe inxhinieri
+# October's very own
+
+## Projekt web dhe inxhinieri
  
