@@ -7,12 +7,12 @@ const password = document.getElementById("password");
 
 const usernameValidator = () => {
     const usernameIsValid = usernameRegex.test(username.value);
-    usernameIsValid ? console.log("Username eshte mire") : console.log("Username eshte gabim");
+    usernameIsValid ? console.log("Username eshte mire") : alert("Username eshte gabim");
     return usernameIsValid
 }
 const passwordValidator = () => {
     const passwordIsValid = passwordRegex.test(password.value);
-    passwordIsValid ? console.log("Password eshte mire") : console.log("Password eshte gabim");
+    passwordIsValid ? console.log("Password eshte mire") : alert("Password eshte gabim");
     return passwordIsValid
 }
 

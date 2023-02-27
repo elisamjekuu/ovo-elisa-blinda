@@ -40,7 +40,7 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 body {
@@ -95,14 +95,14 @@ a:visited {
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px dashed var(--accent);
+  outline: 2px dashed var(--text2);
   outline-offset: 2px;
 }
 
-input:invalid,
+/* input:invalid,
 textarea:invalid {
   outline-color: var(--invalid);
-}
+} */
 
 a.underline,
 button {
@@ -198,7 +198,6 @@ svg {
 @media (min-width: 37.5em) {
   .header {
     margin-block-start: 30px;
-    /* margin-block-end: 90px; */
   }
 
   .header__nav {
@@ -232,6 +231,8 @@ svg {
 }
 
 .hero__image {
+  margin-top: 200px;
+  border-radius: 180px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -306,8 +307,10 @@ h1 > span {
   }
 
   .hero__image {
+    margin-block-start: -60px;
+    border-radius: 180px;
     position: relative;
-    width: 42vw;
+    width: 32vw;
     max-width: 445px;
     /* width: 322px; */
     height: auto;
@@ -374,7 +377,13 @@ h1 > span {
   }
 
   .hero__image {
-    margin-block-start: -199px;
+    margin-block-start: -85px;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
   .hero__rings {
@@ -414,13 +423,16 @@ h1 > span {
 }
 
 .banner {
-  background-image: url('./banner.avif');
+  background-image: url("../images/lasvegas.avif");
   background-position: center;
-  width: 1920px;
-  height: 800px;
+  height: 700px;
 }
 
 .skills__wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+  background-color: var(--bg-body2);
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -455,7 +467,14 @@ h1 > span {
     gap: 52px 24px;
     border: none;
     padding-block: 52px 0;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
+  }
+
+  .dashboard {
+    gap: 52px 24px;
+    border: none;
+    padding-block: 52px 0;
+    padding-bottom: 90px;
   }
 
   .skills__item {
@@ -468,8 +487,22 @@ h1 > span {
 }
 
 @media (min-width: 62.5em) {
+  .contact {
+    background-color: var(--bg-body2);
+  }
+
+  .banner {
+    width: 1920px;
+    height: 1000px;
+  }
+  
   .skills__wrapper {
     grid-template-columns: repeat(3, 1fr);
+    gap: 58px 30px;
+    padding-block-start: 72px;
+  }
+
+  .dashboard {
     gap: 58px 30px;
     padding-block-start: 72px;
   }
@@ -600,7 +633,7 @@ h1 > span {
   }
 
   .projects__picture::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -777,4 +810,63 @@ footer {
   footer {
     padding-block: 47px 92px;
   }
+}
+
+table {
+  overflow-x: auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  color: var(--accent);
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.dashboard {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-block: 40px;
+}
+
+#dashboard {
+  padding: 160px;
+  padding-top: 0px;
+}
+
+.tableimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 950px) {
+  #dashboard {
+    padding: 30px;
+  }
+
+  .dashboard_title {
+    font-size: 22px;
+  }
+
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: var(--bg-body);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  color: var(--text1);
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
 }
